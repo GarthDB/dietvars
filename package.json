@@ -1,0 +1,19 @@
+{
+  "name": "dietvar-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "browser-sync 'www' 'node_modules/@spectrum-css' -w",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Garth Braithwaite <garthdb@gmail.com> (http://garthdb.com/)",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "browser-sync": "^2.26.14"
+  },
+  "dependencies": {
+    "@spectrum-css/button": "^3.0.1",
+    "@spectrum-css/page": "^3.0.1"
+  }
+}
