@@ -12,7 +12,7 @@
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
-    "build-storybook": "build-storybook",
+    "build-storybook": "build-storybook -o ./docs",
     "storybook": "start-storybook -p 6006"
   },
   "dependencies": {
