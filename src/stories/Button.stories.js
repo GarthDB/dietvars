@@ -1,7 +1,8 @@
 import Button from "./Button.vue";
+import Icon from "./Icon.vue";
 
 export default {
-  title: "Example/Button",
+  title: "Button",
   component: Button,
   argTypes: {
     label: { control: { type: "text" } },
@@ -11,6 +12,7 @@ export default {
         options: ["cta", "primary", "secondary", "warning"]
       }
     },
+    icon: { options: Icon.iconNames, control: { type: "select" } },
     size: { control: { type: "radio", options: ["s", "m", "l", "xl"] } },
     overbackground: { control: { type: "boolean" } }
   }
@@ -25,30 +27,37 @@ const Template = (args, { argTypes }) => ({
 export const Primary = Template.bind({});
 Primary.args = {
   variant: "primary",
-  label: "Button"
+  label: "Action"
 };
+
+export const PrimaryWithIcon = Template.bind({});
+PrimaryWithIcon.args = {
+  variant: "primary",
+  label: "Action",
+  icon: "magic wand"
+};
+
+// export const IconOnly = Template.bind({});
+// IconOnly.args = {
+//   variant: "primary",
+//   label: false,
+//   icon: "magic wand"
+// };
 
 export const Secondary = Template.bind({});
 Secondary.args = {
   variant: "secondary",
-  label: "Button"
+  label: "Action"
 };
 
 export const CTA = Template.bind({});
 CTA.args = {
   variant: "cta",
-  label: "Button"
+  label: "Action"
 };
 
 export const Warning = Template.bind({});
 Warning.args = {
   variant: "warning",
-  label: "Button"
+  label: "Action"
 };
-
-//
-// export const Small = Template.bind({});
-// Small.args = {
-//   size: 'small',
-//   label: 'Button',
-// };

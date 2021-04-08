@@ -1,15 +1,24 @@
 <template>
-  <button type="button" :class="classes" @click="onClick" v-bind:disabled="isDisabled">{{ label }}</button>
+  <button
+    type="button"
+    :class="classes"
+    @click="onClick"
+    v-bind:disabled="isDisabled"
+  >
+    <Icon :icon="icon" v-if="icon" />
+    <span class="spectrum-Button-label" v-if="label">{{ label }}</span>
+  </button>
 </template>
 
 <script>
+import Icon from "./Icon.vue";
+
 export default {
-  name: "button",
+  name: "Button",
 
   props: {
     label: {
-      type: String,
-      required: true
+      type: [String, Boolean]
     },
     size: {
       type: String,
@@ -40,7 +49,18 @@ export default {
     isDisabled: {
       type: Boolean,
       default: false
+    },
+    icon: {
+      type: [String, Boolean],
+      default: false,
+      validator: function(value) {
+        return Icon.iconNames.indexOf(value) !== -1;
+      }
     }
+  },
+
+  components: {
+    Icon
   },
 
   computed: {
