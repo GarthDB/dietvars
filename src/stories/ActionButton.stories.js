@@ -7,8 +7,7 @@ export default {
   argTypes: {
     label: { control: { type: "text" } },
     size: { options: ["s", "m", "l", "xl"], control: { type: "select" } },
-    icon: { options: Icon.iconNames, control: { type: "select" } },
-    overbackground: { control: { type: "boolean" } }
+    icon: { options: Icon.iconNames, control: { type: "select" } }
   }
 };
 

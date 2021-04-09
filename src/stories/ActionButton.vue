@@ -1,7 +1,14 @@
 <template>
-  <button type="button" :class="classes" @click="onClick" v-bind:disabled="isDisabled">
-    <Icon :icon="this.icon" v-if="this.icon"/>
-    <span class="spectrum-ActionButton-label" v-if="this.label">{{ label }}</span>
+  <button
+    type="button"
+    :class="classes"
+    @click="onClick"
+    v-bind:disabled="isDisabled"
+  >
+    <Icon :icon="this.icon" v-if="this.icon" :size="size" />
+    <span class="spectrum-ActionButton-label" v-if="this.label">{{
+      label
+    }}</span>
   </button>
 </template>
 
@@ -41,14 +48,15 @@ export default {
       type: Boolean,
       default: false
     },
-    icon : {
+    icon: {
       type: [String, Boolean],
       default: "stickers",
       validator: function(value) {
         return Icon.iconNames.indexOf(value) !== -1;
       }
     }
-  }, components: { Icon },
+  },
+  components: { Icon },
 
   computed: {
     classes() {
@@ -71,5 +79,7 @@ export default {
 };
 </script>
 
-<style src="@spectrum-css/dietvars/dist/components/spectrum-actionbutton.css"></style>
+<style
+  src="@spectrum-css/dietvars/dist/components/spectrum-actionbutton.css"
+></style>
 <style src="@spectrum-css/actionbutton/dist/index-vars.css"></style>

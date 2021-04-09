@@ -5,7 +5,7 @@
     @click="onClick"
     v-bind:disabled="isDisabled"
   >
-    <Icon :icon="icon" v-if="icon" />
+    <Icon :icon="icon" v-if="icon" :size="size" />
     <span class="spectrum-Button-label" v-if="label">{{ label }}</span>
   </button>
 </template>

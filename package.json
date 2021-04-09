@@ -19,7 +19,7 @@
   "dependencies": {
     "@spectrum-css/actionbutton": "^1.0.1",
     "@spectrum-css/button": "^3.0.1",
-    "@spectrum-css/dietvars": "1.0.0-beta.9",
+    "@spectrum-css/dietvars": "1.0.0-beta.10",
     "@spectrum-css/fieldlabel": "^3.0.1",
     "@spectrum-css/icon": "^3.0.1",
     "@spectrum-css/page": "^3.0.1",
