@@ -2246,10 +2246,10 @@
   resolved "https://registry.npmjs.org/@spectrum-css/button/-/button-3.0.1.tgz"
   integrity sha512-YXrBtjIYisk4Vaxnp0RiE4gdElQX04P2mc4Pi2GlQ27dJKlHmufYcF+kAqGdtiyK5yjdN/vKRcC8y13aA4rusA==
 
-"@spectrum-css/dietvars@1.0.0-beta.10":
-  version "1.0.0-beta.10"
-  resolved "https://registry.yarnpkg.com/@spectrum-css/dietvars/-/dietvars-1.0.0-beta.10.tgz#5f2e3b2cb207a4da448ab893a3b0e149c3babd2c"
-  integrity sha512-frdQR5vxZ02Lh519QBhQjwQkQobk2y+VWkx1ES5vzREeu8Xv/yozVobZBGp5bPCLj0LeSu3jQpIgyz3HbxKakw==
+"@spectrum-css/dietvars@1.0.0-beta.11":
+  version "1.0.0-beta.11"
+  resolved "https://registry.yarnpkg.com/@spectrum-css/dietvars/-/dietvars-1.0.0-beta.11.tgz#9ae704072a8c825cf7339b43c751a24b424f8bfa"
+  integrity sha512-6rEyWlO6NHkfk6AQTVyO9AknL+vyRj1bt0Hu6Ki/1nwlJKaSqos5tSZQEsM/QvhpBFGYG1CUY5RuCdxM1q+h6w==
   dependencies:
     "@adobe/spectrum-css-workflow-icons" "^1.2.0"
 

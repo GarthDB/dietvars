@@ -6,6 +6,8 @@
       v-bind:id="id"
       v-bind:disabled="isDisabled"
       class="spectrum-Textfield-input"
+      @focus="onFocus"
+      @blur="onBlur"
     />
   </div>
 </template>
@@ -49,21 +51,32 @@ export default {
     Icon
   },
 
+  data: function () {
+    return {
+      focused: false
+    }
+  },
+
   computed: {
     classes() {
       return {
         "spectrum-Textfield": true,
-        [`spectrum-Textfield--size${this.size.toUpperCase()}`]: true,
         "spectrum-Textfield--quiet": this.quiet,
         "is-disabled": this.isDisabled,
-        "focus-ring": this.focusRing
+        "focus-ring": this.focusRing,
+        "is-focused": this.focused
       };
     }
   },
 
   methods: {
-    onClick() {
-      this.$emit("onClick");
+    onFocus() {
+      this.focused = true
+      this.$emit("onFocus");
+    },
+    onBlur() {
+      this.focused = false;
+      this.$emit("onBlur");
     }
   }
 };
