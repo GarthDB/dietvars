@@ -15,8 +15,11 @@ const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
   components: { ActionButton },
   template: `<div>
-    <ActionButton @onClick="onClick" v-bind="$props" />&nbsp;
-    <ActionButton @onClick="onClick" v-bind="$props" v-bind:isSelected="true" />&nbsp;
+    <h2>Basic</h2>
+    <ActionButton @onClick="onClick" v-bind="$props" />
+    <h2>Selected</h2>
+    <ActionButton @onClick="onClick" v-bind="$props" v-bind:isSelected="true" />
+    <h2>Basic &amp; Disabled</h2>
     <ActionButton @onClick="onClick" v-bind="$props" v-bind:isSelected="true" v-bind:isDisabled="true" />
   </div>`
 });
